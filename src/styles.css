@@ -1,8 +1,25 @@
 .App {
   font-family: sans-serif;
-  text-align: center;
+  /* text-align: center; */
 }
 
-.counterContainer{
-  display:flex;
+.counterContainer {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  align-items: center;
+  background-color: red;
+  /* justify-content: center; */
+  margin: 0 auto;
+}
+
+.counter {
+  padding: 5px;
+  font-size: 1.25em;
+}
+
+button {
+  width: 5em;
+  height: 2em;
+  margin: 2px;
 }
