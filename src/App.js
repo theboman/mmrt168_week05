@@ -5,14 +5,20 @@ export default function App() {
   let [count, setCount] = useState(0);
   const [incrementBy, setIncrementBy] = useState(1);
 
+  // a function that takes the type add or subtract and the mulitple 1 or 2
   function myCounter(type, multiple) {
-    if (count >= 10 || count <= -10) {
-      setCount((count = 0));
-    }
     if (type === "add") {
-      setCount(count + multiple);
+      if (count + multiple >= 11) {
+        setCount((count = 0));
+      } else {
+        setCount(count + multiple);
+      }
     } else if (type === "subtract") {
-      setCount(count - multiple);
+      if (count - multiple <= -11) {
+        setCount((count = 0));
+      } else {
+        setCount(count - multiple);
+      }
     }
   }
 
@@ -27,12 +33,13 @@ export default function App() {
           <button onClick={() => myCounter("add", incrementBy)}>+</button>
           <button onClick={() => myCounter("subtract", incrementBy)}>-</button>
           <button
+            className={incrementBy === 2 ? "btn-active" : ""}
             onClick={() => {
               incrementBy === 1 ? setIncrementBy(2) : setIncrementBy(1);
             }}
           >
             {" "}
-            x2{" "}
+            +{incrementBy}{" "}
           </button>
         </div>
       </div>

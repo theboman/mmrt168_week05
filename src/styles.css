@@ -1,15 +1,15 @@
 .App {
   font-family: sans-serif;
-  /* text-align: center; */
 }
 
 .counterContainer {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 70vw;
   align-items: center;
-  background-color: red;
-  /* justify-content: center; */
+  border-radius: 5px;
+  background-image: linear-gradient(to bottom right, #46eeaa, #2cbfc7);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 0 auto;
 }
 
@@ -22,4 +22,19 @@ button {
   width: 5em;
   height: 2em;
   margin: 2px;
+  border: none;
+  border-radius: 3px;
+}
+
+button:active {
+  border: 1px solid green;
+}
+
+button:focus {
+  outline: none;
+}
+
+.btn-active {
+  color: white;
+  background-color: rgb(39, 69, 238);
 }
